@@ -5,32 +5,32 @@ import './Calculator.css'
  
   render() {
     const clearFuntion=()=>{
-      document.getElementById('result').value="";
+      document.getElementById('result').innerHTML="";
     }
      const displayEvent=(a)=>{
-        document.getElementById('result').value+=a;
+        document.getElementById('result').innerHTML+=a;
     }
     const equalOperation =()=>{
-      var x=document.getElementById('result').value;
+      var x=document.getElementById('result').innerHTML;
       var y=eval(x);
       if(y!==undefined){
-      document.getElementById('result').value=y;
+      document.getElementById('result').innerHTML=y;
     }
     else{
       alert("Please Enter Value!")
     }
   }
     const deleteFunction=()=>{
-      var result=document.getElementById('result').value;
+      var result=document.getElementById('result').innerHTML;
       var lengthOfResult=result.length;
       result=result.substring(0,lengthOfResult-1);
-      document.getElementById('result').value=result;
+      document.getElementById('result').innerHTML=result;
     }
     return (
       <div className='App-container'>
         <div>
-          <input type='text' id='result'/>
-          <button onClick={clearFuntion} id='clearButton'>Clear</button>
+          <p id="result"></p>
+          
         </div>
         <div>
           <button onClick={()=>displayEvent('7')} id='numberButton'>7</button>
@@ -57,6 +57,7 @@ import './Calculator.css'
           <button onClick={()=>displayEvent('+')} id='operatorButton'>+</button>
         </div>
         <button onClick={deleteFunction} id='deleteButton'>Del</button>
+        <button onClick={clearFuntion} id='clearButton'>Clear</button>
       </div>
     )
   }

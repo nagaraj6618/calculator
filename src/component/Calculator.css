@@ -9,6 +9,7 @@
   margin-right: 25%;
   text-align: center;
   background-color: rgb(37, 41, 75);  
+ 
   
 }
 #numberButton,#operatorButton,#EqualButton,#clearButton,#deleteButton{
@@ -18,12 +19,17 @@
   cursor: pointer;
   border: none;
   border-radius: 5px;
+  
 }
 #result{
   border-radius: 5px;
   height: 45px;
   border: none;
   padding-left: 20px;
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  
 
 }
 #operatorButton{
@@ -37,4 +43,13 @@
 }
 .lastdiv{
   margin-left: 3px;
+}
+@media(max-width:576px)
+{
+  .App-container{
+    padding: 20px 0px;
+    
+    margin:50% 6%;
+    
+  }
 }
