@@ -1,0 +1,13 @@
+.time-app{
+  display: flex;
+  justify-content: center;
+}
+.time{
+  border: 2px solid rgb(37, 41, 75);
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: rgb(255, 108, 92);
+  
+ 
+}
